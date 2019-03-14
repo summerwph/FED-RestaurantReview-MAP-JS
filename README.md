@@ -1,6 +1,5 @@
 # Restaurant Reviews
 
-## Summary
 In this project, which are including the following:
 1. Loading the map. This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/).
 2. Explore the provided code, and implement the required feature in three areas:
@@ -15,6 +14,7 @@ In this project, which are including the following:
 	Python 2: `python -m SimpleHTTPServer 8000` 
 	Python 3: `python3 -m http.server 8000`
 4. Visit the site in your browser at http://localhost:8000
+![Home Page](img/RestaurantReviews.png)
 
 ### Resource/Referencce
 1. [Udacity Restaurant Review App Project](https://www.diigo.com/outliner/fjslyn/Udacity-Restaurant-Reviews-App-(project-%235)?key=zqiopam1yz)
