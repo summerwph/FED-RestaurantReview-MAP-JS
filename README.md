@@ -1,5 +1,5 @@
 # Restaurant Reviews
----
+
 ## Summary
 In this project, which are including the following:
 1. Loading the map. This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/).
