@@ -78,7 +78,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: 'pk.eyJ1Ijoic3VtbWVyLXd1IiwiYSI6ImNqbXRydGdnbDJhZ3YzcnFjeGMyd3V0OG0ifQ.PIgklItFsWVs17vlPf05DQ',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -161,24 +161,34 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  //Add image alt
+  image.alt = restaurant.name + ' image';
   li.append(image);
+
+  const text = document.createElement('div');
+  text.className = 'restaurant-text';
+  li.append(text);
 
   const name = document.createElement('h1');
   name.innerHTML = restaurant.name;
-  li.append(name);
+  text.append(name);
 
   const neighborhood = document.createElement('p');
   neighborhood.innerHTML = restaurant.neighborhood;
-  li.append(neighborhood);
+  text.append(neighborhood);
 
   const address = document.createElement('p');
   address.innerHTML = restaurant.address;
-  li.append(address);
+  text.append(address);
 
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  li.append(more)
+  
+  // Add more information for accessibility
+  more.tabIndex = '3';
+  more.setAttribute('aria-label', 'View Details for ' + restaurant.name);
+  text.append(more)
 
   return li
 }
@@ -208,4 +218,21 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+
+/**
+* Add Service Workder
+*/
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker
+  .register('/js/sw.js')
+  .then(function() {
+    console.log('serviceWorker registration successfull!!');
+  })
+  .catch(function(err) {
+    console.error('serviceWorker registration failed: ', err);
+  });
+}
+
+
 
