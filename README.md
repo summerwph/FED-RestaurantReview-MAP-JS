@@ -1,6 +1,6 @@
 # Restaurant Reviews
 
-In this project, which are including the following:
+In this project, which is including the followings:
 1. Loading the map. This repository uses [leafletjs](https://leafletjs.com/) with [Mapbox](https://www.mapbox.com/). You need to replace `<your MAPBOX API KEY HERE>` with a token from [Mapbox](https://www.mapbox.com/).
 2. Explore the provided code, and implement the required feature in three areas:
 	- reponsive design - adding view-port, using flex-box;
@@ -16,7 +16,7 @@ In this project, which are including the following:
 4. Visit the site in your browser at http://localhost:8000
 ![Home Page](img/RestaurantReviews.png)
 
-### Resource/Referencce
+### Resources/References
 1. [Udacity Restaurant Review App Project](https://www.diigo.com/outliner/fjslyn/Udacity-Restaurant-Reviews-App-(project-%235)?key=zqiopam1yz)
 2. [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 3. [Project 1 MWS Webinar with Doug Brown](https://www.youtube.com/watch?v=92dtrNU1GQc)
